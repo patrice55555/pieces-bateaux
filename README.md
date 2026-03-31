@@ -46,3 +46,25 @@ Exemple PowerShell:
 - Les Specifications et le Delivery delay sont lus dans l'accordeon #accordion.
 - price_gbp_numeric est normalise en decimal avec point et deux decimales, sans separateur de milliers.
 - Le stock est normalise en valeur numerique: quantite si presente, sinon 0.
+
+## Mise a jour GitHub
+
+Apres un nouveau scraping, tu peux pousser les changements vers GitHub avec une seule commande PowerShell :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\update-github.ps1
+```
+
+Tu peux aussi definir ton propre message de commit :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\update-github.ps1 -CommitMessage "Mise a jour apres nouveau scraping"
+```
+
+Le script :
+
+- verifie que le dossier est bien un depot Git
+- detecte s'il y a des changements
+- ajoute tous les fichiers modifies
+- cree un commit
+- pousse sur la branche main du depot GitHub
