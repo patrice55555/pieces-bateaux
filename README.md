@@ -52,15 +52,7 @@ Exemple PowerShell:
 Apres un nouveau scraping, tu peux pousser les changements vers GitHub avec une seule commande PowerShell :
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\update-github.ps1
-```
-
-Tu peux aussi definir ton propre message de commit :
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\update-github.ps1 -CommitMessage "Mise a jour apres nouveau scraping"
-```
-
+pSet-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; .\scripts\update-github.ps1 -CommitMessage "Mise a jour apres nouveau scraping"
 Le script :
 
 - verifie que le dossier est bien un depot Git
