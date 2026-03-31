@@ -27,7 +27,7 @@ Apres un nouveau scraping, tu peux pousser les changements vers GitHub avec une 
 
 ```powershell
 
-pSet-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; .\scripts\update-github.ps1 -CommitMessage "Mise a jour apres nouveau scraping"
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; .\scripts\update-github.ps1 -CommitMessage "Mise a jour apres nouveau scraping"
 
 Le script :
 - verifie que le dossier est bien un depot Git
